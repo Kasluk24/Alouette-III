@@ -22,6 +22,88 @@
 	 <property>/fdm/jsbsim/instruments/autopilot-lock-heading-bug</property>
     </binding>
    </key>
+   
+   <key n="48">
+   	<name>Numpad 0</name>
+   	<desc>Propeller left</desc>
+   	<repeatable type="bool">true</repeatable>
+   	<binding>
+   	 <command>property-adjust</command>
+   	 <property>/controls/flight/rudder</property>
+   	 <step>-0.02</step>
+   	 <min>-1</min>
+   	 <wrap>false</wrap>
+   	</binding>
+   </key>
+   
+   <key n="13">
+   	<name>Numpad Enter</name>
+   	<desc>Propeller right</desc>
+   	<repeatable type="bool">true</repeatable>
+   	<binding>
+   	 <command>property-adjust</command>
+   	 <property>/controls/flight/rudder</property>
+   	 <step>0.02</step>
+   	 <max>1</max>
+   	 <wrap>false</wrap>
+   	</binding>
+   </key>
+   
+   <key n="360">
+   	<name>PgUp</name>
+   	<desc>Main rotor down</desc>
+   	<repeatable type="bool">true</repeatable>
+   	<binding>
+   	 <condition>
+   	 	<property>/devices/status/keyboard/event/pressed</property>
+   	 </condition>
+   	 <command>property-adjust</command>
+   	 <property>/controls/engines/engine[0]/throttle</property>
+   	 <step>0.002</step>
+   	 <max>1</max>
+   	 <wrap>false</wrap>
+   	</binding>
+   	<binding>
+   	 <condition>
+   	 	<not>
+   	 		<property>/devices/status/keyboard/event/pressed</property>
+   	 	</not>
+   	 </condition>
+   	 <command>property-adjust</command>
+   	 <property>/controls/engines/engine[0]/throttle</property>
+   	 <step>0.05</step>
+   	 <max>1</max>
+   	 <wrap>false</wrap>
+   	</binding>
+   </key>
+   
+   <key n="361">
+   	<name>PgDn</name>
+   	<desc>Main rotor up</desc>
+   	<repeatable type="bool">true</repeatable>
+   	<binding>
+   	 <condition>
+   	 	<property>/devices/status/keyboard/event/pressed</property>
+   	 </condition>
+   	 <command>property-adjust</command>
+   	 <property>/controls/engines/engine[0]/throttle</property>
+   	 <step>-0.002</step>
+   	 <min>0</min>
+   	 <wrap>false</wrap>
+   	</binding>
+   	<binding>
+   	 <condition>
+   	 	<not>
+   	 		<property>/devices/status/keyboard/event/pressed</property>
+   	 	</not>
+   	 </condition>
+   	 <command>property-adjust</command>
+   	 <property>/controls/engines/engine[0]/throttle</property>
+   	 <step>-0.05</step>
+   	 <min>0</min>
+   	 <wrap>false</wrap>
+   	</binding>
+   </key>
 
    <!--<key n="4"> 
     <name>Ctrl+d</name>
