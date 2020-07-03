@@ -134,8 +134,8 @@
         <!-- Exit point for the walker -->
            <map>
             <default_exit>
-             <x-offset-m type="float">1.5</x-offset-m>
-             <y-offset-m type="float">1.5</y-offset-m>
+             <x-offset-m type="float">1.0</x-offset-m>
+             <y-offset-m type="float">1.2</y-offset-m>
            </default_exit>
           </map>
         </model>
