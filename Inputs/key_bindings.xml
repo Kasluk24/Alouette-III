@@ -62,12 +62,13 @@
    
    <key n="360">
    	<name>PgUp</name>
-   	<desc>Main rotor down</desc>
+   	<desc>Throttle down</desc>
    	<repeatable type="bool">true</repeatable>
    	<binding>
    	 <command>property-adjust</command>
    	 <property>/controls/engines/engine[0]/throttle</property>
    	 <step>0.002</step>
+   	 <min>0</min>
    	 <max>1</max>
    	 <wrap>false</wrap>
    	</binding>
@@ -75,12 +76,13 @@
 
    <key n="361">
    	<name>PgDn</name>
-   	<desc>Main rotor up</desc>
+   	<desc>Throttle up</desc>
    	<repeatable type="bool">true</repeatable>
    	<binding>
    	 <property>/controls/engines/engine[0]/throttle</property>
    	 <step>-0.002</step>
    	 <min>0</min>
+   	 <max>1</max>
    	 <wrap>false</wrap>
    	</binding>
    </key>
@@ -188,8 +190,8 @@
     </binding>
    </key>
 
-   <key n="23"> 
-    <name>Ctrl+w</name>
+   <key n="13"> 
+    <name>Ctrl+q</name>
     <desc>Toggle winch position</desc>
     <repeatable type="bool">false</repeatable>
     <binding>
@@ -202,8 +204,8 @@
     </binding>
    </key>
 
-   <key n="87"> 
-    <name>Shift+w</name>
+   <key n="81"> 
+    <name>Shift+q</name>
     <desc>Winch down</desc>
     <repeatable type="bool">true</repeatable>
     <binding>

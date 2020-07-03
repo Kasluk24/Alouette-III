@@ -12,7 +12,7 @@
 ************************************************************************
 -->
 
-<PropertyList>
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
     <note>
         This model was created using publicly available data, publicly available
         technical reports, textbooks, and guesses. It contains no proprietary or
@@ -131,6 +131,13 @@
 		    <reflection-rainbow type="float">0.1</reflection-rainbow>
 		</shader_2>
         	<crew include="Models/Crew/crew_cfg.xml"/>
+        <!-- Exit point for the walker -->
+           <map>
+            <default_exit>
+             <x-offset-m type="float">1.5</x-offset-m>
+             <y-offset-m type="float">1.5</y-offset-m>
+           </default_exit>
+          </map>
         </model>
         <winch include="Models/Rope/rope_definitions.xml"/>
         <view>

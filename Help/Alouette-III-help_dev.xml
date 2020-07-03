@@ -32,11 +32,11 @@
             	<desc>Toggle Amelia takeover</desc>
 	</key>
 	<key>
-		<name>Ctrl+w</name>
+		<name>Ctrl+q</name>
             	<desc>Toggle winch deployment</desc>
 	</key>
 	<key>
-		<name>Shift+w</name>
+		<name>Shift+q</name>
             	<desc>Winch down</desc>
 	</key>
 	<key>
