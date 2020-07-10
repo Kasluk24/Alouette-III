@@ -190,7 +190,7 @@
     </binding>
    </key>
 
-   <key n="13"> 
+   <key n="17"> 
     <name>Ctrl+q</name>
     <desc>Toggle winch position</desc>
     <repeatable type="bool">false</repeatable>
@@ -232,7 +232,6 @@
 	 <command>property-toggle</command>
 	 <property>/fdm/jsbsim/electrical/lighting/landing-lights</property>
     </binding>
-
    </key>
 
 
@@ -255,9 +254,5 @@
          <max>88</max>
     </binding>
    </key>
-
-   
-
-
   </keyboard>
 </PropertyList>

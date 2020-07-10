@@ -224,5 +224,108 @@
 				<factor>1.5</factor>
 			</pitch>
 		</crash>
+		
+<!-- SWITCHES
+        <switches>
+            <name>several-switches</name>
+            <mode>once</mode>
+            <path>Aircraft/Alouette-III/Sounds/click.wav</path>
+			<condition>
+				<or>
+					<equals>
+            			<property>fdm/jsbsim/electrical/switch/battery</property>
+            			<value>0</value>
+            		</equals>
+            		<equals>
+            			<property>fdm/jsbsim/electrical/switch/battery</property>
+            			<value>1</value>
+            		</equals>
+					<equals>
+            			<property>fdm/jsbsim/electrical/switch/alternator</property>
+            			<value>0</value>
+            		</equals>
+            		<equals>
+            			<property>fdm/jsbsim/electrical/switch/alternator</property>
+            			<value>1</value>
+            		</equals>
+					<equals>
+            			<property>fdm/jsbsim/electrical/switch/master</property>
+            			<value>0</value>
+            		</equals>
+            		<equals>
+            			<property>fdm/jsbsim/electrical/switch/master</property>
+            			<value>1</value>
+            		</equals>
+					<equals>
+            			<property>fdm/jsbsim/animation/cutoff-master-switch</property>
+            			<value>0</value>
+            		</equals>
+            		<equals>
+            			<property>fdm/jsbsim/animation/cutoff-master-switch</property>
+            			<value>1</value>
+            		</equals>
+            	</or>       
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-1.5</x>
+                <y>0.0</y>
+                <z>0.0</z>
+            </position>
+            <reference-dist>5</reference-dist>
+            <max-dist>10</max-dist>
+        </switches>
+-->
+		
+<!-- DOORS  -->
+		<!-- Right door -->
+        <doors>
+            <name>AV-DPort</name>
+            <mode>once</mode>
+            <path>Aircraft/Alouette-III/Sounds/close-door.wav</path>
+            <condition>
+            	<not>
+                	<property>fdm/jsbsim/animation/right-door-pos-norm</property>
+                </not>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-1.5</x>
+                <y>1.0</y>
+                <z>0.0</z>
+            </position>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
+        </doors>
+        
+        <!-- Left door -->
+        <doors>
+            <name>AV-GPort</name>
+            <mode>once</mode>
+            <path>Aircraft/Alouette-III/Sounds/close-door.wav</path>
+            <condition>
+            	<not>
+                	<property>fdm/jsbsim/animation/left-door-pos-norm</property>
+                </not>
+            </condition>
+            <volume>
+                <property>sim/signals/fdm-initialized</property>
+                <factor>1</factor>
+            </volume>
+            <position>
+                <x>-1.5</x>
+                <y>-1.0</y>
+                <z>0.0</z>
+            </position>
+            <reference-dist>5</reference-dist>
+            <max-dist>50</max-dist>
+        </doors>
+		
 	</fx>
 </PropertyList>
