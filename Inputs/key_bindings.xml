@@ -79,6 +79,7 @@
    	<desc>Throttle up</desc>
    	<repeatable type="bool">true</repeatable>
    	<binding>
+   	 <command>property-adjust</command>
    	 <property>/controls/engines/engine[0]/throttle</property>
    	 <step>-0.002</step>
    	 <min>0</min>
